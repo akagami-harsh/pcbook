@@ -13,7 +13,6 @@ message Screen {
     enum Panel {
         UNKNOWN = 0;
         IPS = 1;
-        IPS_PLUS = 2;
         LCD = 3;
     }
 
