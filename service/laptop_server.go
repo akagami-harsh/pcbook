@@ -13,12 +13,15 @@ import (
 
 // LaptopServer is a server that provice laptop related services.
 type LaptopServer struct {
+	pb.UnimplementedLaptopServiceServer
 	Store LaptopStore
 }
 
 // NewLaptopSever creates a new laptop server.
-func NewLaptopSever() *LaptopServer {
-	return &LaptopServer{}
+func NewLaptopServer(laptopStore LaptopStore) *LaptopServer {
+	return &LaptopServer{
+		Store: laptopStore,
+	}
 }
 
 // CreateLaptop creates a unary RPC to create a new laptop.
@@ -41,6 +44,16 @@ func (server *LaptopServer) CreateLaptop(
 			return nil, status.Errorf(codes.Internal, "can not generate a new UUID: %v", err)
 		}
 		laptop.Id = id.String()
+	}
+
+	if ctx.Err() == context.Canceled {
+		log.Print("request is canceled")
+		return nil, status.Error(codes.Canceled, "request is canceled")
+	}
+
+	if ctx.Err() == context.DeadlineExceeded {
+		log.Print("deadline is exceeded")
+		return nil, status.Error(codes.DeadlineExceeded, "deadline is exceeded")
 	}
 
 	// save the laptop to in-memory store
