@@ -1,25 +1,25 @@
 {
- "id": "50fd8712-a547-48d2-8949-f21414ef29e1",
+ "id": "cc4b19d5-65f0-4971-95aa-838ebb2cf856",
  "brand": "Lenovo",
- "name": "ThinkCentre",
+ "name": "ThinkPad",
  "cpu": {
-  "brand": "AMD",
-  "name": "A8",
+  "brand": "Intel",
+  "name": "i5",
   "number_cores": 7,
-  "number_threads": 12,
-  "min_ghz": 3.166180243210409,
-  "max_ghz": 6.0481350243866165
+  "number_threads": 11,
+  "min_ghz": 2.6605722746918605,
+  "max_ghz": 3.706885764483376
  },
  "ram": {
-  "value": "47",
+  "value": "17",
   "unit": "GIGABYTE"
  },
  "gpu": [
   {
    "brand": "NVIDIA",
-   "name": "GTX 980",
-   "min_ghz": 1.0725341692846926,
-   "max_ghz": 3.2385470564126635,
+   "name": "GTX 1080",
+   "min_ghz": 1.2023183576642003,
+   "max_ghz": 3.4750259760728595,
    "memory": {
     "value": "8",
     "unit": "GIGABYTE"
@@ -30,33 +30,33 @@
   {
    "driver": "SSD",
    "memory": {
-    "value": "884",
+    "value": "409",
     "unit": "GIGABYTE"
    }
   },
   {
    "driver": "HDD",
    "memory": {
-    "value": "5",
+    "value": "4",
     "unit": "TERABYTE"
    }
   }
  ],
  "screen": {
-  "size_inch": 13.709786,
+  "size_inch": 15.599748,
   "resolution": {
-   "width": 5374,
-   "height": 3023
+   "width": 2348,
+   "height": 1321
   },
-  "panel": "IPS",
+  "panel": "LCD",
   "multitouch": true
  },
  "keyboard": {
-  "layout": "AZERTY",
+  "layout": "QWERTY",
   "backlit": false
  },
- "weight_kg": 1.3187063467378535,
- "price_usd": 2883.323844250999,
- "release_year": 2020,
- "updated_at": "2024-01-04T15:04:06.906891797Z"
+ "weight_kg": 2.250907150512674,
+ "price_usd": 1765.410233790586,
+ "release_year": 2022,
+ "updated_at": "2024-01-05T18:27:45.339047151Z"
 }
